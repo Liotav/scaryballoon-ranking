@@ -73,7 +73,7 @@ def mostrar_texto(texto, y, centro=True, fonte=font, cor=TEXT_COLOR):
 
 def salvar_recorde(nome, stage, tempo):
     with open("recordes.txt", "a") as f:
-        f.write(f"{nome} – Stage {stage} – {tempo:.2f}s\n")
+        f.write(f"{nome} - Stage {stage} - {tempo:.2f}s\n")
 
 clock = pygame.time.Clock()
 running = True
