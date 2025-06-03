@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Scary Balloon Ranking</title>
+  <meta charset="UTF-8" />
+  <title>Scary Balloon</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    h1 {
+      margin-top: 100px;
+      color: lime;
+    }
+    .balloon-button {
+      margin-top: 40px;
+      background: none;
+      border: none;
+    }
+    .balloon-button img {
+      width: 60px;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body style="background-color:black; color:white; font-family:Courier;">
-    <h1>🩸 Top 5 Players 🩸</h1>
-    <ul id="ranking"></ul>
+<body>
+  <h1>🎈 Welcome to Scary Balloon 🎈</h1>
+  <p>Click the balloon to start the game!</p>
 
-    <script>
-        fetch("/score")
-            .then(res => res.json())
-            .then(data => {
-                const list = document.getElementById("ranking");
-                data.forEach(player => {
-                    const item = document.createElement("li");
-                    item.textContent = `${player.name} - Stage ${player.stage} - ${player.time}s`;
-                    list.appendChild(item);
-                });
-            });
-    </script>
+  <!-- Balão de início -->
+  <form action="/game">
+    <button class="balloon-button" type="submit">
+      <img src="/static/imagens/balao.png" alt="Start Game" />
+    </button>
+  </form>
 </body>
 </html>
