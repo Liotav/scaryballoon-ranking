@@ -18,19 +18,19 @@ font = pygame.font.SysFont("couriernew", 28, bold=True)
 big_font = pygame.font.SysFont("couriernew", 40, bold=True)
 small_font = pygame.font.SysFont("couriernew", 20, bold=True)
 
-img_balao = pygame.image.load("imagens/balao.png")
+img_balao = pygame.image.load("static/imagens/balao.png")
 img_balao = pygame.transform.scale(img_balao, (80, 120))
 img_balao_start = pygame.transform.scale(img_balao, (50, 75))
 img_balao_restart = pygame.transform.scale(img_balao, (90, 135))
 
-img_susto = pygame.image.load("imagens/susto.png")
+img_susto = pygame.image.load("static/imagens/susto.png")
 img_susto = pygame.transform.scale(img_susto, (800, 600))
 
 logo_img = pygame.image.load("logo.png")
 logo_img = pygame.transform.scale(logo_img, (140, 50))
 
 pygame.mixer.init()
-susto_som = pygame.mixer.Sound("sons/susto.mp3")
+susto_som = pygame.mixer.Sound("static/sons/susto.mp3")
 
 stage = 1
 max_stage = 9
